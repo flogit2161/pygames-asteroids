@@ -35,7 +35,7 @@ def main():
                 return pygame.quit()
             for bullet in shots:
                 if bullet.collides(asteroidrock):
-                    asteroidrock.kill()
+                    asteroidrock.split()
                     bullet.kill()
 
         pygame.display.flip()
