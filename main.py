@@ -33,6 +33,11 @@ def main():
             if player.collides(asteroidrock):
                 print('Game over!')
                 return pygame.quit()
+            for bullet in shots:
+                if bullet.collides(asteroidrock):
+                    asteroidrock.kill()
+                    bullet.kill()
+
         pygame.display.flip()
         dt = clock.tick(60) / 1000
         
